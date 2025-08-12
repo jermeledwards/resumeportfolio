@@ -96,7 +96,6 @@
       margin-top: 50px;
       font-size: 1.8rem;
     }
-    /* Projects */
     .projects {
       display: flex;
       flex-wrap: wrap;
@@ -127,7 +126,6 @@
       text-align: center;
       margin-top: 10px;
     }
-    /* Skills bubbles */
     .skills-bubble-container {
       display: flex;
       flex-wrap: wrap;
@@ -155,7 +153,6 @@
       color: #000;
       box-shadow: 0 0 15px #ffcc00;
     }
-    /* Animations */
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes floatSkill {
@@ -214,7 +211,83 @@
 
     <h2>Skills</h2>
     <div class="skills-bubble-container">
-      <!-- (Keep your skills list here exactly as you already have it) -->
+      <span class="skill-bubble">Upstream Engineering</span>
+      <span class="skill-bubble">Upstream Oil and Gas</span>
+      <span class="skill-bubble">Ammonia</span>
+      <span class="skill-bubble">Hydrogen</span>
+      <span class="skill-bubble">Process Engineering</span>
+      <span class="skill-bubble">Chemical Engineering</span>
+      <span class="skill-bubble">Refining Processes</span>
+      <span class="skill-bubble">Field Operations</span>
+      <span class="skill-bubble">Rotating & Compressor Sizing</span>
+      <span class="skill-bubble">Pumps</span>
+      <span class="skill-bubble">Valves</span>
+      <span class="skill-bubble">Heat Exchangers</span>
+      <span class="skill-bubble">Pressure Vessels</span>
+      <span class="skill-bubble">Compressors</span>
+      <span class="skill-bubble">Static Equipment</span>
+      <span class="skill-bubble">Project Commissioning</span>
+      <span class="skill-bubble">Operating Procedures</span>
+      <span class="skill-bubble">Performance Testing</span>
+      <span class="skill-bubble">Cryogenics</span>
+      <span class="skill-bubble">Hazop Awareness</span>
+      <span class="skill-bubble">Risk Assessment</span>
+      <span class="skill-bubble">Engineering Analysis</span>
+      <span class="skill-bubble">Process Simulation</span>
+      <span class="skill-bubble">Distributed Control Systems (DCS)</span>
+      <span class="skill-bubble">Control Valves</span>
+      <span class="skill-bubble">Power BI</span>
+      <span class="skill-bubble">Excel</span>
+      <span class="skill-bubble">Microsoft Office</span>
+      <span class="skill-bubble">Office 365</span>
+      <span class="skill-bubble">Tableau</span>
+      <span class="skill-bubble">Smart Plant 3D</span>
+      <span class="skill-bubble">SCADA</span>
+      <span class="skill-bubble">Aspen HYSYS</span>
+      <span class="skill-bubble">CAESAR II</span>
+      <span class="skill-bubble">ANSYS</span>
+      <span class="skill-bubble">MATLAB</span>
+      <span class="skill-bubble">Python</span>
+      <span class="skill-bubble">SQL</span>
+      <span class="skill-bubble">AutoCAD</span>
+      <span class="skill-bubble">Autodesk Inventor</span>
+      <span class="skill-bubble">Autodesk Fusion 360</span>
+      <span class="skill-bubble">Navisworks</span>
+      <span class="skill-bubble">SolidWorks</span>
+      <span class="skill-bubble">VBA</span>
+      <span class="skill-bubble">GIS Software</span>
+      <span class="skill-bubble">WaterCAD</span>
+      <span class="skill-bubble">WaterGEMS</span>
+      <span class="skill-bubble">3D Visualization</span>
+      <span class="skill-bubble">Electrical and Instrumentation Engineering</span>
+      <span class="skill-bubble">Power Equipment</span>
+      <span class="skill-bubble">Power Generation</span>
+      <span class="skill-bubble">Power Systems</span>
+      <span class="skill-bubble">Transmission Systems</span>
+      <span class="skill-bubble">ETAP</span>
+      <span class="skill-bubble">Basic Electricity</span>
+      <span class="skill-bubble">Grid Coordination</span>
+      <span class="skill-bubble">HMI</span>
+      <span class="skill-bubble">Civil Engineering</span>
+      <span class="skill-bubble">Structural Engineering</span>
+      <span class="skill-bubble">Structural Drafting</span>
+      <span class="skill-bubble">Concrete</span>
+      <span class="skill-bubble">Steel</span>
+      <span class="skill-bubble">Building Processes & Codes</span>
+      <span class="skill-bubble">Document Management</span>
+      <span class="skill-bubble">Construction Estimating</span>
+      <span class="skill-bubble">Statics</span>
+      <span class="skill-bubble">P&ID</span>
+      <span class="skill-bubble">Systems Design</span>
+      <span class="skill-bubble">Utility Coordination</span>
+      <span class="skill-bubble">CADWorx</span>
+      <span class="skill-bubble">Product Development</span>
+      <span class="skill-bubble">Team Coordination</span>
+      <span class="skill-bubble">EPC</span>
+      <span class="skill-bubble">Document Preparation</span>
+      <span class="skill-bubble">NERC Policy</span>
+      <span class="skill-bubble">AI for Business</span>
+      <span class="skill-bubble">Research</span>
     </div>
   </div>
 
@@ -222,6 +295,12 @@
     const video = document.getElementById("bgVideo");
     video.addEventListener("timeupdate", () => {
       if (video.duration - video.currentTime <= 0.1) {
+        video.pause();
+        video.currentTime = video.duration; // Stay on last frame
+      }
+    });
+    video.addEventListener("play", () => {
+      if (video.currentTime >= video.duration - 0.1) {
         video.pause();
       }
     });
