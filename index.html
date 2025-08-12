@@ -294,5 +294,15 @@
       <span class="skill-bubble">Research</span>
     </div>
   </div>
+<script>
+  const video = document.getElementById("bgVideo");
+
+  video.addEventListener("timeupdate", () => {
+    // If within 0.1 seconds of the end
+    if (video.duration - video.currentTime <= 0.1) {
+      video.pause();
+    }
+  });
+</script>
 </body>
 </html>
